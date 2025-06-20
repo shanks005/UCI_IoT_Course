@@ -1,0 +1,40 @@
+
+System Name: Smart Home Temperature and Fan Control System
+
+Goal:
+Automatically monitor and control room temperature in your home and report real-time data to your phone or PC using WiFi.
+
+System Overview:
+This system uses an Arduino Uno + WiFi Shield, a DHT11 temperature and humidity sensor, and a relay module to control a fan.
+
+The WiFi connection allows:
+- Sending temperature data to a web dashboard or mobile app
+- Receiving remote commands to turn the fan ON or OFF manually
+
+Components Used:
+- Arduino Uno
+- ESP8266 WiFi Shield or Arduino WiFi Shield
+- DHT11 Temperature & Humidity Sensor
+- 5V Relay Module (connected to a fan)
+- Power Supply
+- Smartphone or computer with internet access
+
+How It Works:
+1. DHT11 sensor measures the room temperature and humidity every 5 seconds.
+2. If temperature > 30°C, Arduino automatically turns on the fan using the relay.
+3. Arduino sends data to a cloud service (like ThingSpeak, Blynk, or a custom server) via WiFi.
+4. From your phone, you can view live data and send a remote command to override the fan control.
+5. The system logs historical temperature and humidity data if needed.
+
+Why WiFi is Important:
+- Enables remote monitoring of room conditions
+- Allows manual fan control from anywhere
+- Supports smart home integration with Google Assistant or Alexa in future upgrades
+
+Optional Features to Add Later:
+- Buzzer alert if limits are exceeded
+- Motion sensor for auto fan control
+- Multiple sensors for a centralized home dashboard
+
+Summary:
+This system uses Arduino with a WiFi shield to monitor and control room temperature. WiFi is essential for remote monitoring, data logging, and user control, making it a smart and connected home automation solution.

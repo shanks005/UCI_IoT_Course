@@ -1,0 +1,20 @@
+void setup(){
+  pinMode(13,OUTPUT);
+  digitalWrite(13,HIGH);
+  Serial.begin(9600);
+}
+void loop(){
+  char val;
+  if(Serial.available()==1){
+    val=Serial.read();
+    Serial.println(val);
+    if(val=='1'){
+      digitalWrite(13,LOW);
+    }
+    else if(val=='0'){
+      digitalWrite(13,HIGH);
+    }
+    else{
+      Serial.println("Invalid");
+    }
+  }
